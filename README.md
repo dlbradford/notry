@@ -295,7 +295,7 @@ If still happening:
 ## Version
 
 - **Application**: Notry v1.0.0
-- **Last Updated**: November 2024
+- **Last Updated**: November 2025
 - **Python Requirement**: 3.7+ (configured for 3.14)
 - **Dependencies**: textual
 
