@@ -1,6 +1,6 @@
 # Notry Changelog
 
-## Version 1.0.0 - November 2024
+## Version 1.0.0 - November 2025
 
 ### Features
 - Full-text search across note titles and content
