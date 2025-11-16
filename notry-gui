@@ -1,0 +1,20 @@
+#!/bin/bash
+# Notry GUI Launcher
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Try to find a terminal and run notry
+if command -v gnome-terminal &> /dev/null; then
+    gnome-terminal -- bash -c "cd '$SCRIPT_DIR' && ./notry; echo ''; read -p 'Press Enter to close...'"
+elif command -v xterm &> /dev/null; then
+    xterm -e bash -c "cd '$SCRIPT_DIR' && ./notry; echo ''; read -p 'Press Enter to close...'"
+elif command -v konsole &> /dev/null; then
+    konsole -e bash -c "cd '$SCRIPT_DIR' && ./notry; echo ''; read -p 'Press Enter to close...'"
+elif command -v xfce4-terminal &> /dev/null; then
+    xfce4-terminal -e bash -c "cd '$SCRIPT_DIR' && ./notry; echo ''; read -p 'Press Enter to close...'"
+else
+    # Fallback - just run in current terminal
+    cd "$SCRIPT_DIR"
+    ./notry
+    read -p "Press Enter to close..."
+fi
